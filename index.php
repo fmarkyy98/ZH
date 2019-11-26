@@ -26,7 +26,7 @@ while($i < 25 && !$van) // Ciklus amíg "i" kisebb mint 25 ÉS amíg "van" ért�
         $van = true; // Van értékét igazra állítom. (Ezzel jelezve hogy megtaláltam amit kerestem.)
     }
     // Itt lehetne else de most minek...
-    ++$i; // FONTOS!!! "i" ciklusváltozó értékét növelni kell hogy ne mutathasson az indexem a tömbön kívülre! pl.: $lista[26] <- ilyen nincs!!!
+    ++$i; // FONTOS!!! "i" ciklusváltozó értékét növelni kell hogy ne fussak végtelen ciklusba.
 }
 if ($van) // Ha "van" olyan elem amit kerestem akkor:
 {
@@ -51,7 +51,7 @@ if ($van) // Csak akkor fusson le ha benne van ezért, ezért egy nagy if-be meg
             $index = $i; // "index" értékének átadom az "i"-t. (Mert ugye itt találtam meg.)
         }
         // Itt lehetne else de most is minek...
-        ++$i; // FONTOS!!! "i" ciklusváltozó értékét növelni kell hogy ne mutathasson az indexem a tömbön kívülre! pl.: $lista[26] <- ilyen nincs!!!
+        ++$i; // FONTOS!!! "i" ciklusváltozó értékét növelni kell hogy ne fussak végtelen ciklusba.
     }
     echo "Tömb beli helye:", $index + 1; // Kiírom a helyét ami mindig "index" + 1. (Hely és index nem ugyan az.)
     echo "<br>"; // Sortörés.
